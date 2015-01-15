@@ -1,13 +1,13 @@
-# ag2nurun-gulp [![Build Status](https://secure.travis-ci.org/MatheusSThomaz/slush-ag2nurun-gulp.png?branch=master)](https://travis-ci.org/MatheusSThomaz/slush-ag2nurun-gulp) [![NPM version](https://badge-me.herokuapp.com/api/npm/slush-ag2nurun-gulp.png)](http://badges.enytc.com/for/npm/slush-ag2nurun-gulp)
+# AG2Nurun - Slush Gulp Generator [![NPM version](https://badge-me.herokuapp.com/api/npm/slush-ag2nurun-gulp.png)](http://badges.enytc.com/for/npm/slush-ag2nurun-gulp)
 
 > 
 
-
 ## Getting Started
 
-Install `slush-ag2nurun-gulp` globally:
+Install 'slush' and 'slush-ag2nurun-gulp' globally:
 
 ```bash
+$ npm install -g slush
 $ npm install -g slush-ag2nurun-gulp
 ```
 
@@ -25,20 +25,14 @@ Run the generator from within the new folder:
 $ cd my-slush-ag2nurun-gulp && slush ag2nurun-gulp
 ```
 
-## Getting To Know Slush
-
-Slush is a tool that uses Gulp for project scaffolding.
-
-Slush does not contain anything "out of the box", except the ability to locate installed slush generators and to run them with liftoff.
-
-To find out more about Slush, check out the [documentation](https://github.com/klei/slush).
-
 ## Contributing
 
 See the [CONTRIBUTING Guidelines](https://github.com/MatheusSThomaz/slush-ag2nurun-gulp/blob/master/CONTRIBUTING.md)
 
 ## Support
 If you have any problem or suggestion please open an issue [here](https://github.com/MatheusSThomaz/slush-ag2nurun-gulp/issues).
+
+> 
 
 ## License 
 

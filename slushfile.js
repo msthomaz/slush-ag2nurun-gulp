@@ -54,9 +54,14 @@ gulp.task('default', function (done) {
         message: 'What is the author name?',
         default: 'AG2Nurun Tech Team'
     }, {
+        type: 'list',
         name: 'selectPreprocessor',
         message: 'What preprocessor you wnat to use?',
-        choices: ["less", "sass"]
+        choices: [
+                { name: 'less', value: 'less' },
+                { name: 'sass', value: 'sass' }
+            ],
+        default: 0
     }, {
         type: 'confirm',
         name: 'moveon',
