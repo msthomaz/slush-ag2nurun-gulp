@@ -37,6 +37,24 @@ var defaults = (function () {
     };
 })();
 
+console.log([
+    '',
+    '',
+    '     _    ____ ____  _   _                        ',
+    '    / \\  / ___|___ \\| \\ | |_   _ _ __ _   _ _ __  ',
+    '   / _ \\| |  _  __) |  \\| | | | | \'__\| \| \| \| \'_ \\ ',
+    '  / ___ \\ |_| |/ __/| |\\  | |_| | |  | |_| | | | |',
+    ' /_/   \\_\\____|_____|_| \\_|\\__,_|_|   \\__,_|_| |_|',
+    '                                                  ',
+    '',
+    '            AG2Nurun Gulp Generator',
+    '            I hope you enjoy it :)',
+    '',
+    '              - @MatheusSThomaz',
+    '',
+    ''
+  ].join('\n'));
+
 gulp.task('default', function (done) {
     var prompts = [{
         name: 'appName',
