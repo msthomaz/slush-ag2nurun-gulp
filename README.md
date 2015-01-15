@@ -1,6 +1,5 @@
-# AG2Nurun - Slush Gulp Generator [![NPM version](https://badge-me.herokuapp.com/api/npm/slush-ag2nurun-gulp.png)](http://badges.enytc.com/for/npm/slush-ag2nurun-gulp)
-
-> 
+# AG2Nurun - Slush Gulp Generator
+[![NPM version](https://badge-me.herokuapp.com/api/npm/slush-ag2nurun-gulp.png)](http://badges.enytc.com/for/npm/slush-ag2nurun-gulp)
 
 ## Getting Started
 
@@ -31,8 +30,6 @@ See the [CONTRIBUTING Guidelines](https://github.com/MatheusSThomaz/slush-ag2nur
 
 ## Support
 If you have any problem or suggestion please open an issue [here](https://github.com/MatheusSThomaz/slush-ag2nurun-gulp/issues).
-
-> 
 
 ## License 
 
