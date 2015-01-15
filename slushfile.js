@@ -56,7 +56,7 @@ gulp.task('default', function (done) {
     }, {
         type: 'list',
         name: 'selectPreprocessor',
-        message: 'What preprocessor you wnat to use?',
+        message: 'What preprocessor you want to use?',
         choices: [
                 { name: 'less', value: 'less' },
                 { name: 'sass', value: 'sass' }
