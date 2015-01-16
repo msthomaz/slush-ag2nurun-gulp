@@ -1,3 +1,7 @@
+v0.1.11:
+  date: 2015-0-16
+  changes:
+    - Add Sass Foundation option.
 v0.1.7:
   date: 2015-0-15
   changes:

@@ -77,7 +77,8 @@ gulp.task('default', function (done) {
         message: 'What preprocessor you want to use?',
         choices: [
                 { name: 'less', value: 'less' },
-                { name: 'sass', value: 'sass' }
+                { name: 'sass', value: 'sass' },
+                { name: 'sass with Foundation', value: 'sass-foundation' }
             ],
         default: 0
     }, {
