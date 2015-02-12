@@ -1,17 +1,21 @@
 v0.1.11:
-  date: 2015-0-16
+  date: 2015-02-12
+  changes:
+    - Adding stylus support. Thanks Diego Rocha.
+v0.1.11:
+  date: 2015-01-16
   changes:
     - Add Sass Foundation option.
 v0.1.7:
-  date: 2015-0-15
+  date: 2015-01-15
   changes:
     - Add introduction on init.
 v0.1.3:
-  date: 2015-0-15
+  date: 2015-01-15
   changes:
     - Add sass support.
 v0.1.0:
-  date: 2015-0-15
+  date: 2015-01-15
   changes:
     - Initial release.
     - Add less support.
