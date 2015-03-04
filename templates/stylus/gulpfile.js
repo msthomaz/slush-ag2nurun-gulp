@@ -18,7 +18,8 @@ var path = {
 
 gulp.task('stylus', function () {
   return gulp.src(path.stylus)
-    .pipe(stylus({ compress: true }).on('error', function (err) { errorLog(err); }))
+    .pipe(stylus({ compress: true }))
+    .on('error', gutil.log)
     .pipe(gulp.dest('dev/assets/css/'))
     .pipe(reload({stream:true}));
 });
@@ -43,7 +44,8 @@ gulp.task('watch', function () {
 
 gulp.task('js:build', function () {
   return gulp.src(path.js)
-    .pipe(uglify({outSourceMap: true}).on('error', function (err) { errorLog(err); }))
+    .pipe(uglify({outSourceMap: true}))
+    .on('error', gutil.log)
     .pipe(gulp.dest('build/assets/js/'));
 });
 
@@ -62,8 +64,3 @@ gulp.task('default', ['stylus', 'watch', 'sync']);
 gulp.task('build', function () {
   runSequence('stylus', 'js:build', 'move:build');
 });
-
-errorLog = function (err) {
-  gutil.log('Arquivo: ' + err.fileName);
-  gutil.log('Erro: ' + err.message);
-};

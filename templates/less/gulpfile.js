@@ -20,8 +20,9 @@ var path = {
 gulp.task('less', function () {
   return gulp.src(path.less)
     .pipe(changed('dev/assets/css/'))
-    .pipe(less().on('error', function (err) { errorLog(err); }))
-    .pipe(cssmin().on('error', function (err) { errorLog(err); }))
+    .pipe(less())
+    .on('error', gutil.log)
+    .pipe(cssmin())
     .pipe(gulp.dest('dev/assets/css/'))
     .pipe(reload({stream:true}));
 });
@@ -46,7 +47,8 @@ gulp.task('watch', function () {
 
 gulp.task('js:build', function () {
   return gulp.src(path.js)
-    .pipe(uglify({outSourceMap: true}).on('error', function (err) { errorLog(err); }))
+    .pipe(uglify({outSourceMap: true}))
+    .on('error', gutil.log)
     .pipe(gulp.dest('build/assets/js/'));
 });
 
@@ -65,8 +67,3 @@ gulp.task('default', ['less', 'watch', 'sync']);
 gulp.task('build', function () {
   runSequence('less', 'js:build', 'move:build');
 });
-
-errorLog = function (err) {
-  gutil.log('Arquivo: ' + err.fileName);
-  gutil.log('Erro: ' + err.message);
-};
