@@ -18,6 +18,7 @@ var path = {
 
 gulp.task('stylus', function () {
   return gulp.src(path.stylus)
+    .pipe(changed('dev/assets/css/'))
     .pipe(stylus({ compress: true }))
     .on('error', gutil.log)
     .pipe(gulp.dest('dev/assets/css/'))

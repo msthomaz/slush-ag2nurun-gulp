@@ -19,7 +19,7 @@ var path = {
 
 gulp.task('sass', function () {
   return gulp.src(path.sass)
-    .pipe(changed('dev/assets/sass/'))
+    .pipe(changed('dev/assets/css/'))
     .pipe(sass())
     .on('error', gutil.log)
     .pipe(cssmin())
