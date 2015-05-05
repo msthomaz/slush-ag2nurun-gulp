@@ -1,5 +1,6 @@
-@import "_settings";
 @import "foundation";
+@import "_settings";
+@import "_variables";
 
 // Or selectively include components
 // @import
@@ -39,5 +40,22 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
+body {
+  background: blue;
+}
 
-p {color: red;}
+@media #{$small-only} {
+  body {
+    background: red;
+  }
+}
+
+@media #{$medium-only} {
+  body {
+    background: green;
+  }
+}
+
+@media #{$large-up} {
+ 
+}
