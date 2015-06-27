@@ -6,6 +6,7 @@ var gulp      = require('gulp'),
   concat      = require('gulp-concat'),
   changed     = require('gulp-changed'),
   runSequence = require('run-sequence'),
+  plumber     = require('gulp-plumber'),
   gutil       = require('gulp-util');
 
 var path = {
@@ -19,8 +20,13 @@ var path = {
 gulp.task('stylus', function () {
   return gulp.src(path.stylus)
     .pipe(changed('dev/assets/css/'))
+    .pipe(plumber({
+      errorHandler: function (err) {
+        console.log(err);
+        this.emit('end');
+      }
+    }))
     .pipe(stylus({ compress: true }))
-    .on('error', gutil.log)
     .pipe(gulp.dest('dev/assets/css/'))
     .pipe(reload({stream:true}));
 });

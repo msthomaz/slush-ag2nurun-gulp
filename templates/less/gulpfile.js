@@ -7,6 +7,7 @@ var gulp      = require('gulp'),
   concat      = require('gulp-concat'),
   changed     = require('gulp-changed'),
   runSequence = require('run-sequence'),
+  plumber     = require('gulp-plumber'),
   gutil       = require('gulp-util');
 
 var path = {
@@ -20,8 +21,13 @@ var path = {
 gulp.task('less', function () {
   return gulp.src(path.less)
     .pipe(changed('dev/assets/css/'))
+    .pipe(plumber({
+      errorHandler: function (err) {
+        console.log(err);
+        this.emit('end');
+      }
+    }))
     .pipe(less())
-    .on('error', gutil.log)
     .pipe(cssmin())
     .pipe(gulp.dest('dev/assets/css/'))
     .pipe(reload({stream:true}));
