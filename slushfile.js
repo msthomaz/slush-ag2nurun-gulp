@@ -50,7 +50,7 @@ console.log([
     '            AG2Nurun Gulp Generator',
     '            I hope you enjoy it :)',
     '',
-    '     - Matheus Thomaz | contato@msthomaz.com',
+    '     Matheus Thomaz | contato@msthomaz.com',
     '',
     ''
   ].join('\n'));
