@@ -78,7 +78,7 @@ gulp.task('default', function (done) {
         choices: [
                 { name: 'less', value: 'less' },
                 { name: 'sass', value: 'sass' },
-                { name: 'sass with Foundation', value: 'sass-foundation' },
+                { name: 'sass with Foundation 6', value: 'sass-foundation' },
                 { name: 'stylus', value: 'stylus' }
             ],
         default: 0

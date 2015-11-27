@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "AG2Nurun Tech Team"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "~6.0.4"
+  }
+}

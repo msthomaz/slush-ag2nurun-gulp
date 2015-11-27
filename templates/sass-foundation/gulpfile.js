@@ -8,6 +8,7 @@ var gulp      = require('gulp'),
   changed     = require('gulp-changed'),
   runSequence = require('run-sequence'),
   plumber     = require('gulp-plumber'),
+  bower       = require('gulp-bower'),
   gutil       = require('gulp-util');
 
 var path = {
@@ -15,8 +16,15 @@ var path = {
   sass: ['dev/assets/sass/**/*.scss'],
   css: ['dev/assets/css/**/*.css', '!dev/assets/css/**/*.min.css'],
   img: ['dev/assets/img/*'],
-  html: ['dev/**/*.html']
+  html: ['dev/**/*.html'],
+  bower: 'dev/bower_components' 
 };
+
+gulp.task('bower', function() { 
+  return bower()
+     .pipe(gulp.dest(path.bower)) 
+});
+
 
 gulp.task('sass', function () {
   return gulp.src(path.sass)
@@ -59,9 +67,9 @@ gulp.task('js:build', function () {
 });
 
 gulp.task('move:build', function () {
-  return gulp.src([ 
+  return gulp.src([
     'dev/**',
-    '!dev/assets/sass', 
+    '!dev/assets/sass',
     '!dev/assets/sass/**/*.scss',
     '!dev/assets/js',
     '!dev/assets/js/**/*.js'
@@ -69,7 +77,7 @@ gulp.task('move:build', function () {
   .pipe(gulp.dest('build/'));
 });
 
-gulp.task('default', ['sass', 'watch', 'sync']);
+gulp.task('default', ['bower', 'sass', 'watch', 'sync']);
 gulp.task('build', function () {
   runSequence('sass', 'js:build', 'move:build');
 });
